@@ -31,7 +31,7 @@ def define_env(env):
         try:
             dicBox[key]['deets'] = deets[key]
         except KeyError:
-            print("%s is not a box!" % key)
+            print(f"{key} is not a box!")
 
     # env.conf['extra']['boxes'] = boxes
     env.conf['extra']['boxes'] = list(dicBox.values())
@@ -66,7 +66,7 @@ def define_env(env):
                 f.write(outputText.encode('utf-8'))
 
         except Exception as ex:
-            print('error: ' + repr(ex))
+            print(f'error: {repr(ex)}')
             print(json_response)
 
 def on_pre_page_macros(env):
